@@ -1,0 +1,27 @@
+/* =========================================================
+   TEMA 2000s — LAS SUPER ESTRELLAS  (music.html)
+   Paleta del PDF: durazno / arena con acentos cobre
+   Requiere base.css cargado antes
+   ========================================================= */
+
+:root{
+    --hero-1: #FCCB9E;       /* degradado de la portada */
+    --hero-2: #B98B66;
+    --accent: #C5833F;       /* marcos, títulos y botones */
+    --accent-light: #F4C79A; /* hover y detalles claros */
+    --dark-title: #F4C79A;   /* subtítulos sobre fondo negro */
+    --sub-color: #fff;
+}
+
+/* curva blanca inferior de la portada, como en el PDF */
+.hero{
+    border-bottom-left-radius: 0;
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 60px;
+    background: linear-gradient(to top, rgba(0,0,0,.25), transparent);
+    pointer-events: none;
+}
