@@ -1,0 +1,28 @@
+/* =========================================================
+   TEMA 2010s — REVOLUCIÓN DIGITAL  (movies.html)
+   Paleta del PDF: lavanda / azul violeta
+   Requiere base.css cargado antes
+   ========================================================= */
+
+:root{
+    --hero-1: #9E9DD6;       /* degradado de la portada */
+    --hero-2: #5A64A8;
+    --accent: #4B4A9A;       /* marcos, títulos y botones */
+    --accent-light: #B4B0E8; /* hover y detalles claros */
+    --dark-title: #A9A5DB;   /* subtítulos sobre fondo negro */
+    --sub-color: #fff;
+}
+
+/* texto de la portada en negro, como en la página 9 del PDF */
+.hero p.lead{
+    color: #111;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 60px;
+    background: linear-gradient(to top, rgba(0,0,0,.25), transparent);
+    pointer-events: none;
+}
