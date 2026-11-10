@@ -1,0 +1,32 @@
+/* =========================================================
+   TEMA 2020s — UNA NUEVA ERA MUSICAL  (food.html)
+   Paleta del PDF: salmón / rosado con azul violeta
+   Requiere base.css cargado antes
+   ========================================================= */
+
+:root{
+    --hero-1: #F2B6A0;       /* degradado de la portada */
+    --hero-2: #5E6DAB;
+    --accent: #EE9F88;       /* marcos, títulos y botones */
+    --accent-light: #F8C9B9; /* hover y detalles claros */
+    --dark-title: #F2B6A0;   /* subtítulos sobre fondo negro */
+    --sub-color: #fff;
+}
+
+/* el degradado de esta portada es diagonal rosado → azul */
+.hero{
+    background: linear-gradient(150deg, var(--hero-1) 0%, #B49AB0 45%, var(--hero-2) 100%);
+}
+
+.hero p.lead{
+    color: #111;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 60px;
+    background: linear-gradient(to top, rgba(0,0,0,.25), transparent);
+    pointer-events: none;
+}
