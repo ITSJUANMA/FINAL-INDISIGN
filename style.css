@@ -1,0 +1,162 @@
+/* =========================================================
+   MUSIC EVOLUTION — página de inicio (index.html)
+   Estilo de portada / contraportada del PDF:
+   fondo negro texturizado, franja azul y título blanco
+   ========================================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{ scroll-behavior: smooth; }
+
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: 'Domine', Georgia, serif;
+    line-height: 1.7;
+}
+
+a{ text-decoration: none; }
+
+/* ---------- PORTADA ---------- */
+#fondito{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 6%;
+    background:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.55)),
+        url("img/portada-azul.jpg") center / cover no-repeat;
+}
+
+h1{
+    font-family: 'Staatliches', Impact, sans-serif;
+    font-weight: 400;
+    font-size: clamp(80px, 18vw, 240px);
+    line-height: .85;
+    color: #fff;
+    -webkit-text-stroke: 3px #fff;
+    letter-spacing: 3px;
+}
+
+h2{
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+    font-size: clamp(60px, 13vw, 170px);
+    line-height: 1;
+    color: #fff;
+    margin-top: -.3em;
+    text-shadow: 0 3px 14px rgba(0,0,0,.4);
+}
+
+.subtitulo{
+    font-family: 'Gochi Hand', cursive;
+    font-size: clamp(20px, 2.5vw, 30px);
+    color: #F4C79A;
+    margin-top: 25px;
+    transform: rotate(-2deg);
+}
+
+/* ---------- CONTRAPORTADA ---------- */
+#contraportada{
+    background: #000 url("img/textura.jpg") center / cover no-repeat;
+    padding: 130px 6% 90px;
+    text-align: center;
+}
+
+p{
+    color: aliceblue;
+    max-width: 780px;
+    margin: 0 auto 60px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+a.descubre{
+    display: inline-block;
+    font-family: 'Domine', Georgia, serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 4px;
+    margin-bottom: 70px;
+}
+
+/* ---------- BOTONES A LAS TRES ÉPOCAS ---------- */
+div#botones{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#botones div{
+    min-width: 280px;
+    border: 2px solid #D8D2C6;
+    transition: all .3s;
+}
+
+#botones a{
+    display: block;
+    padding: 22px 40px;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: #D8D2C6;
+}
+
+#botones small{
+    display: block;
+    font-family: 'Domine', Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    opacity: .85;
+}
+
+/* cada botón toma el color de su época (PDF) */
+#Music:hover{
+    background-color: #C5833F;
+    box-shadow: 0 0 25px #F4C79A;
+    transform: translateY(-4px);
+}
+#Food:hover{
+    background-color: #4B4A9A;
+    box-shadow: 0 0 25px #B4B0E8;
+    transform: translateY(-4px);
+}
+#Movies:hover{
+    background-color: #EE9F88;
+    box-shadow: 0 0 25px #F8C9B9;
+    transform: translateY(-4px);
+}
+#botones div:hover a{ color: #fff; }
+
+/* ---------- LOGO FINAL ---------- */
+.marca{
+    margin-top: 110px;
+    font-family: 'Staatliches', Impact, sans-serif;
+    font-size: 54px;
+    line-height: .9;
+    color: #fff;
+}
+
+.marca span{
+    display: block;
+    font-family: 'Allura', cursive;
+    font-size: 52px;
+    margin-top: -8px;
+}
+
+@media (max-width: 700px){
+    #botones{ gap: 20px; }
+    #botones div{ width: 100%; }
+}
